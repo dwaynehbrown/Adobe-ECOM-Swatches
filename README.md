@@ -122,13 +122,15 @@ Invoke entry point
 node index
 ```
 
+## TODO / Limitations
 
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+- [ ] Readme for each use case 
+- [ ] Support for s3 (can be added at request)  
+- [ ] report total execution time
+  - [ ] each step explicitly
+  - [ ] all steps collectively
+- [ ] notifications when complete
+- [ ] preview outputs when complete
 
 <!-- CONTACT -->
 ## Contact
@@ -137,6 +139,12 @@ Your Name - Dwayne Brown dwayneb@adobe.com
 
 Project Link: [https://github.com/dwaynehbrown/Adobe-ECOM-Swatches](https://github.com/dwaynehbrown/Adobe-ECOM-Swatches)
 
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 

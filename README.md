@@ -12,7 +12,8 @@ Customer Implementation Files
 ```
 ./[customer]                                   | customer namespace
 ./[customer]/[use case]                        | use case namespace
-./[customer]/[use case]/index.js               | *entry point* for the use case
+./[customer]/[use case]/Output                 | output folder collects JSON output for each distinct run 
+./[customer]/[use case]/index.js               | *entry point* for the use case (implements ../[...module files].js)
 ./[customer]/[use case]/config.js              | optional config option to pass to the runner / steps 
 ./[customer]/[use case]/[step_...].js          | each individual steps
 
@@ -31,9 +32,9 @@ Module Files
 ./_sample_step.js   | reference - sample implementation of the step class 
 
 ./_dropbox.js   | Dropbox helper class 
-./_s3.js        | Amazon s3 helper class [TODO]
+./_s3.js        | [TODO] Amazon s3 helper class 
 
-./_store.js   | RemoteFile handling helper class (implements _dropbox.js & _.s3.js
+./_store.js   | RemoteFile handling helper class (implements _dropbox.js & _.s3.js)
 ./_utils.js   | Helper utils 
 ./_keys.js    | "Keystore" helper 
 ```

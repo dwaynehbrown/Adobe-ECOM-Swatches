@@ -55,7 +55,22 @@ node js
 
 A step by step series of examples that tell you how to get a development env running.
 
-Download / clone -> open in terminal -> * open chosen use case folder *
+After downloading / cloning -> open project root in your editor 
+
+[_keys.js] Add file storage access tokens / Adobe authentication keys to _keys.js or .env as appropriate
+
+```
+module.exports = {
+     ... your keys,
+     dropbox: process.env.DROPBOX_KEY,
+     adobe: {
+         clientId: process.env.ADOBE_CLIENT_ID,
+         clientSecret: process.env.ADOBE_CLIENT_SECRET
+     }
+ }
+```
+
+* open chosen use case folder * in terminal
 
 ```
 cd ~/JD/uc_ecom
@@ -67,8 +82,61 @@ Install dependancies
 npm i 
 ```
 
+
+[index.js] Order the steps as you would like them to run
+
+```
+const Runner = require('../../_runner'); // import the runner 
+const config = require('./config');              // import config vars (optional)
+const step_one = require('./step_one');          // import your steps
+const step_two = require('./step_two');          // import your steps
+
+// Declare the runner
+
+const
+    run = new Runner({
+        // information used in the JSON report created after the run is complete
+        // ...config.meta
+
+        title: 'Overarching goal of the script',      // output to console
+        desc: 'extra info / considerations of note'   // output to console
+    },
+        [
+            // steps in order of execution
+            step_one,  // returns data to the running instance on completion
+            step_two   // receives data from previous step from the runner
+            ... 
+        ]
+    );
+
+try {
+    run.start();
+} catch (e) {
+    console.log('Exception ', e)
+}
+```
+
 Invoke entry point
 
 ```
 node index
 ```
+
+
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - Dwayne Brown dwayneb@adobe.com
+
+Project Link: [https://github.com/dwaynehbrown/Adobe-ECOM-Swatches](https://github.com/dwaynehbrown/Adobe-ECOM-Swatches)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+

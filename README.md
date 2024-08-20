@@ -125,6 +125,7 @@ node index
 ## TODO / Limitations
 
 - [ ] Readme for each use case 
+- [ ] Better output for the success / failure report 
 - [ ] Support for s3 (can be added at request)  
 - [ ] report total execution time
   - [ ] each step explicitly
